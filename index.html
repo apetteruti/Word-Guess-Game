@@ -16,27 +16,69 @@
 
             //define variables: station names, letters
             var letters = [];
-            var stations = ["Arlington Cemetery", "Ballston-MU", "Benning Road", "Bethesda", "Cheverly", "Metro Center", "Gallery Place"];
-           
+            var stations = ("Metro Center");
+                   
 
-            //game adminisistrator choosees a word to guess
+            //game chooses a word to guess from the array
 
-                for (i = 0; i < stations.length; i++) {
-                    console.log (stations)
-                }
+                // function wordChoose (str){
+                 var word = stations.split('');
+                console.log (word);
+                // }
 
-            //playerchooses letters to guess
-                var userGuess = prompt ("Enter a letter, Metro Rider!");
-                console.log (letters.push(userGuess));
+                wordChoose(stations);
 
-            //compare the letters to the word -> if the letter entered by the player is in the word chosen by admin
-                function (stations) {
-                    if (letters == i)
-                }
-                  
+                // for (var i = 0; i < stations.length; i++) {
+                //     console.log (stations)
+                // }
+
+            //playerchooses letters to guess - Remember not to allow same letter twice. 
+            //Remember not to let them enter more than one
+                var userKey = prompt("Enter a letter, Metro Rider!", '');
+                    document.onkeyup = function(event) {
+                    userKey = event.key;
+      }
+
+                // for (var j = 0; j < 3; j++){
+                // var userGuess = prompt ("Enter a letter, Metro Rider!");
+                //     letters.push(userGuess);
+                //     console.log(letters);
+                // }
+
+                // If the letter is already used - then send message that we need a new letter
+
+                    // if (letters = userGuess){
+                    //     alert ("Whoops! Looks like you already entered that letter";
+                    // }
+
+                    // else ()
+                    //             )
+
+                //If the letter is in the word 
+                        //then send it to the Word placeholder
+
+                //IF the letter is NOT in the word - 
+                        // a) send to used letter placeholder
+                        // b) add minutes to metro delay time
+
+
+            //match the entered letter to the word.
+                // for (var i = 0; i < stations.length; i++) {
+                //     for (var j=0; j < stations[i].length; j++){
+                //         console.log (stations[i], letters[j]);
+                //     }
+                      
+            //compare the letters to the word -> if the letter entered by the player is in the word chosen by admin then alert then letter.
+            //if the letter isn't in the word, then send it to the used letter list
 
             //fill in the letters as they are guessesd
+
+
             //put the chosen letters, but not used letters in a list
+
+            //wrong guesses get a "Metro penalty (5 minute delay)"
+
+
             //when all the letters are chosen, send a victory message       
 
             
