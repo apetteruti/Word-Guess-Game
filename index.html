@@ -15,71 +15,47 @@
         <script>
 
             //define variables: station names, letters
-            var letters = [];
-            var stations = ("Metro Center");
-                   
-
-            //game chooses a word to guess from the array
-
-                // function wordChoose (str){
-                 var word = stations.split('');
-                console.log (word);
-                // }
-
-                wordChoose(stations);
-
-                // for (var i = 0; i < stations.length; i++) {
-                //     console.log (stations)
-                // }
-
-            //playerchooses letters to guess - Remember not to allow same letter twice. 
-            //Remember not to let them enter more than one
-                var userKey = prompt("Enter a letter, Metro Rider!", '');
-                    document.onkeyup = function(event) {
-                    userKey = event.key;
-      }
-
-                // for (var j = 0; j < 3; j++){
-                // var userGuess = prompt ("Enter a letter, Metro Rider!");
-                //     letters.push(userGuess);
-                //     console.log(letters);
-                // }
-
-                // If the letter is already used - then send message that we need a new letter
-
-                    // if (letters = userGuess){
-                    //     alert ("Whoops! Looks like you already entered that letter";
+            var correct = [];
+            var incorrect = [];
+            var stations = ["Metro Center", "Gallery Place", "Ballston"];
+            var guessLeft = 15;
+            
+            //game chooses a word to guess from the array (choose  word from the array and then split it)
+                document.onkeyup = function (){
+                    var compGuess = stations[Math.floor(Math.random() * 3)];
+                    // for (var i = 0; i > stations.length; i++){
+                    var word = compGuess.split('');
                     // }
+                    console.log (word);
+                    userGuess = event.key  //push this
+                }
 
-                    // else ()
-                    //             )
-
-                //If the letter is in the word 
-                        //then send it to the Word placeholder
-
-                //IF the letter is NOT in the word - 
-                        // a) send to used letter placeholder
-                        // b) add minutes to metro delay time
+            // //player chooses letters to guess
 
 
-            //match the entered letter to the word.
-                // for (var i = 0; i < stations.length; i++) {
-                //     for (var j=0; j < stations[i].length; j++){
-                //         console.log (stations[i], letters[j]);
-                //     }
-                      
-            //compare the letters to the word -> if the letter entered by the player is in the word chosen by admin then alert then letter.
-            //if the letter isn't in the word, then send it to the used letter list
+            // // If the letter is already used - then send message that we need a new letter )
+                    if (userGuess == correct || userGuess == incorrect){
+                        console.log ("Whoops! You already used that letter!");
+                    }
 
-            //fill in the letters as they are guessesd
+            // //If the letter is in the word 
+            //         if (userGuess = word){
+            //             console.log (userGuess);
+            //         }
+
+            // //IF the letter is NOT in the word - 
+            //        if (userGuess !== word){
+            //            console.log (userGuess);
+            //        }
+
+            // //If the word is complete, then send a victory message
+            //        if (word == word){
+            //            console.log (userGuess);
+            //            alert = ("You have arrived at your destination!")
+            //        }
 
 
-            //put the chosen letters, but not used letters in a list
-
-            //wrong guesses get a "Metro penalty (5 minute delay)"
-
-
-            //when all the letters are chosen, send a victory message       
+                //If the word is incomplete, then subtrack a guess from the total number allotted (guessLeft --)
 
             
         </script>
