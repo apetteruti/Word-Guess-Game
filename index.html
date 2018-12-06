@@ -12,7 +12,7 @@
 
     <body>
 
-        <div class = "container metromap"></div>
+        <div class = "metromap"></div>
 
             <div class = "container">
                 <div class = "row">
@@ -82,14 +82,14 @@
             //        }
 
                 }
-                
+
                 //If the word is incomplete, then subtract a guess from the total number allotted (guessLeft --)
 
             var correctDiv = document.getElementById('correct-letters');
-            userScoreDiv.textContent = correct;
+            correctDiv.textContent = correct;
 
             var incorrectDiv = document.getElementById('incorrect-letters');
-            compScoreDiv.textContent = incorrect;
+            incorrectDiv.textContent = incorrect;
 
 
             
