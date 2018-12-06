@@ -12,6 +12,26 @@
 
     <body>
 
+        <div class = "container metromap"></div>
+
+            <div class = "container">
+                <div class = "row">
+                    <!-- <div class = "col-md-6"></div> -->
+
+                    <div id = "wordguess">
+                        <h2> Letters Guessed Correctly</h2>
+                        <h3 id = "correct-letters"></h3>
+                        <br>
+                        
+
+                        <h2> Letters Guessed Incorrectly</h2>
+                        <h3 id = "incorrect-letters"></h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
 
             //define variables: station names, letters
@@ -21,32 +41,39 @@
             var guessLeft = 15;
             
             //game chooses a word to guess from the array (choose  word from the array and then split it)
-                document.onkeyup = function (){
+                document.onkeyup = function (event){
                     var compGuess = stations[Math.floor(Math.random() * 3)];
                     // for (var i = 0; i > stations.length; i++){
                     var word = compGuess.split('');
                     // }
                     console.log (word);
-                    userGuess = event.key  //push this
-                }
+                    var userGuess = event.key;
+                
 
             // //player chooses letters to guess
+                // document.onkeyup = function (event){
+                    // var userGuess = event.key;
+                // }
 
 
             // // If the letter is already used - then send message that we need a new letter )
-                    if (userGuess == correct || userGuess == incorrect){
-                        console.log ("Whoops! You already used that letter!");
-                    }
+                    // if (userGuess == correct || userGuess == incorrect){
+                    //     console.log ("Whoops! You already used that letter!");
+                    // }
 
             // //If the letter is in the word 
-            //         if (userGuess = word){
-            //             console.log (userGuess);
-            //         }
+                    if (userGuess == word){
+                        console.log (userGuess);
+                        userGuess(push).correct;
+                        guessLeft--;
+                    }
 
             // //IF the letter is NOT in the word - 
-            //        if (userGuess !== word){
-            //            console.log (userGuess);
-            //        }
+                   if (userGuess !== word){
+                       console.log (userGuess);
+                       userGuess(push);incorrect
+                       guessLeft--;
+                   }
 
             // //If the word is complete, then send a victory message
             //        if (word == word){
@@ -54,8 +81,16 @@
             //            alert = ("You have arrived at your destination!")
             //        }
 
+                }
+                
+                //If the word is incomplete, then subtract a guess from the total number allotted (guessLeft --)
 
-                //If the word is incomplete, then subtrack a guess from the total number allotted (guessLeft --)
+            var correctDiv = document.getElementById('correct-letters');
+            userScoreDiv.textContent = correct;
+
+            var incorrectDiv = document.getElementById('incorrect-letters');
+            compScoreDiv.textContent = incorrect;
+
 
             
         </script>

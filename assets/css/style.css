@@ -1,0 +1,5 @@
+.metromap{
+    background-image: url(../images/metromap.png);
+    object-fit: contain;
+    height: 200px;
+}
