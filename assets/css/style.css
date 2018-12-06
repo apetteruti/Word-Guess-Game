@@ -1,6 +1,17 @@
 .metromap{
-    background-image: url(../images/metromap.png);
-    object-fit: fill;
+    background-image: url(../images/metromap3.jpg);
+    object-fit: cover;
     height: 200px;
     width: 1000px;
+    margin: 0 auto;
+    /* width: 1000px; */
+}
+
+.gamecontain{
+    background-color: rgb(191, 200, 209);
+}
+
+
+#farragut{
+    width: 200px;
 }
